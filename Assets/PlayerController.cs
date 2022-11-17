@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     bool isOnGround;
     public GameObject groundChecker;
     public LayerMask groundLayer;
-    public float jumpForce = 300.0f;
+    public float jumpForce = 6.0f;
 
     bool doubleJump = true;
 
