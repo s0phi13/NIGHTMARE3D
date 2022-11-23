@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
         camRotation = camRotation + Input.GetAxis("Mouse Y") * camRotationSpeed;
         cam.transform.localRotation = Quaternion.Euler(new Vector3(-camRotation, 0.0f, 0.0f));
-        camRotation = Mathf.Clamp(camRotation, -40.0f, 40f);
+        camRotation = Mathf.Clamp(camRotation, -20.0f, 10f);
 
 
         if (Input.GetKey(KeyCode.LeftShift))
