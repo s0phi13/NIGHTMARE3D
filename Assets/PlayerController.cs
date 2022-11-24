@@ -22,12 +22,21 @@ public class PlayerController : MonoBehaviour
 
     bool doubleJump = true;
 
+    public AudioClip backgroundMusic;
+
+    public AudioSource musicPlayer;
+    public AudioSource sfxPlayer;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
         cam = GameObject.Find("Main Camera");
         myRigidBody = GetComponent<Rigidbody>();
+
+        musicPlayer.clip = backgroundMusic;
+        musicPlayer.loop = true;
+        musicPlayer.Play();
     }
 
     void Update()
