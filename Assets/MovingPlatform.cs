@@ -27,17 +27,21 @@ public class MovingPlatform : MonoBehaviour
         if (isReversing == false)
         {
            myPlatform.position = Vector3.MoveTowards(myPlatform.position, myEndPoint.position, platformSpeed);
+         
         }
         else
         {
              myPlatform.position = Vector3.MoveTowards(myPlatform.position, myStartPoint.position, platformSpeed);
+             if (myPlatform.position == myStartPoint.position);
+             {
+                 isReversing = false;
+             }
         }
-        
-        if (myPlatform.position == myEndPoint.position)
+          if (myPlatform.position == myEndPoint.position)
            {
                isReversing = true;
            }
-        else
+        if (myPlatform.position == myStartPoint.position);
              {
                  isReversing = false;
              }
