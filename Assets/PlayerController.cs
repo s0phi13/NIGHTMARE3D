@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     public float normalSpeed = 10.0f;
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource musicPlayer;
     public AudioSource sfxPlayer;
+
+ 
 
     void Start()
     {
