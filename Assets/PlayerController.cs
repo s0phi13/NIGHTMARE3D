@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
         cam = GameObject.Find("Main Camera");
         myRigidBody = GetComponent<Rigidbody>();
 
-        musicPlayer.clip = backgroundMusic;
-        musicPlayer.loop = true;
-        musicPlayer.Play();
+        //musicPlayer.clip = backgroundMusic;
+       // musicPlayer.loop = true;
+       // musicPlayer.Play();
     }
 
     void Update()
