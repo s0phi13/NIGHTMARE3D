@@ -28,7 +28,10 @@ public class PlayerController : MonoBehaviour
     public AudioSource musicPlayer;
     public AudioSource sfxPlayer;
 
+
  
+
+
 
     void Start()
     {
@@ -37,10 +40,12 @@ public class PlayerController : MonoBehaviour
         cam = GameObject.Find("Main Camera");
         myRigidBody = GetComponent<Rigidbody>();
 
-        //musicPlayer.clip = backgroundMusic;
-       // musicPlayer.loop = true;
-       // musicPlayer.Play();
+        musicPlayer.clip = backgroundMusic;
+        musicPlayer.loop = true;
+        musicPlayer.Play();
     }
+
+  
 
     void Update()
     {
@@ -58,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
         camRotation = camRotation + Input.GetAxis("Mouse Y") * camRotationSpeed;
         cam.transform.localRotation = Quaternion.Euler(new Vector3(-camRotation, 0.0f, 0.0f));
-        camRotation = Mathf.Clamp(camRotation, -20.0f, 10f);
+        camRotation = Mathf.Clamp(camRotation, -30.0f, 30f);
 
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -88,6 +93,6 @@ public class PlayerController : MonoBehaviour
 
 
     }
-
    
+
 }
