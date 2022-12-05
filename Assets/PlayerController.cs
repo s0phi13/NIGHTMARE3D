@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,8 +29,15 @@ public class PlayerController : MonoBehaviour
     public AudioSource sfxPlayer;
 
 
- 
 
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Barrier")
+        {
+            SceneManager.LoadScene(0
+         );
+        }
+    }
 
 
     void Start()
